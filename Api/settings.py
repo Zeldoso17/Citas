@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-!f6fewq9(7^-9i4idrl#1gg6)!$!x(ao6o4#90oafjc4#$&5jk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost:8000", ".herokuapp.com"]
+ALLOWED_HOSTS = [ "127.0.0.1", ".herokuapp.com"]
 
 
 # Application definition
@@ -87,26 +87,14 @@ WSGI_APPLICATION = 'Api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'apicitas',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': 3306,
-        'OPTIONS': {
-            "init_command": "SET foreign_key_checks = 0;",
-        }
+        'USER': 'postgres',
+        'PASSWORD': 'Camaro17',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -150,7 +138,8 @@ ROOT_URLCONF = 'Api.urls'
 CORS_ORIGIN_WHITELIST = (
     'http://localhost',
     'http://localhost:3000',
-    'http://localhost:4200',)
+    'http://localhost:4200',
+    )
 
 
 # Static files (CSS, JavaScript, Images)

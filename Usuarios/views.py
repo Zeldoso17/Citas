@@ -51,6 +51,7 @@ class CreateUser(APIView):
     def post(self, request):
         # AQUI LE PASAMOS LOS DATOS QUE VIENEN DEL FRONTEND AL SERIALIZADOR
         serializer = UserSerializer(data=request.data)
+        print("DATA -> ", request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({'message':'Usuario creado exitosamente'}, status=status.HTTP_201_CREATED)

@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'Api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'apicitas',
-        'USER': 'postgres',
-        'PASSWORD': 'Camaro17',
-        'HOST': '127.0.0.1',
+        'NAME': 'd905srs5f8q0jm',
+        'USER': 'vachxnpedadcqp',
+        'PASSWORD': '2bc53df105d65b4e9c06ac6eee27db9692bef28f03e4dced1f7dc32981227958',
+        'HOST': 'ec2-54-161-255-125.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
